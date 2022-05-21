@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lenceria Mel Francine</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="estilos.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+<!--Encabezado-->
+   <header class="header1">
+      <h1 class="nombre">Lenceria Mel Francine</h1>
+      <div>
+         <input type="search">
+      </div>
+      <nav>
+         <ul>
+            <li><a href="pages/masculino.html">Masculino</a></li>
+            <li><a href="pages/Femenino.html">Femenino</a></li>
+            <li><a href="pages/Otros.html">Otros</a></li>
+         </ul>
+      </nav>     
+   </header>
+   <main class="index">
+      <!--Vista principal-->
+      <article class="vista">
+         <h2>¿Quienes somos?</h2>
+         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo dolore ab, veritatis quae soluta iste et totam non ex sequi dolorum numquam odit aliquid? Doloribus ullam officiis maiores dignissimos mollitia Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptatum magnam mollitia, aperiam officiis dolorem libero animi doloremque, fuga aspernatur dolores architecto, consequatur tenetur iusto. Officiis rerum nemo nisi officia.</p>
+      </article>
+      <section>
+         <h2 class="guia">Guia de talles</h2>
+         <div class="tabla tabla1">
+            <table border="1" cellspacing="0" cellpadding="4"> 
+               <tr>
+                  <th>ROPA INTERIOR FEMENINA</th>
+                  <th colspan="3">Medidas</th>
+               </tr>
+               <tr>
+                  <th>TALLA</th>
+                  <th>PECHO</th>
+                  <th>CINTURA</th>
+                  <th>CADERA</th>
+               </tr>
+               <tr>
+                  <th>M</th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+               </tr>
+               <tr>
+                  <th>L</th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+               </tr>
+               <tr>
+                  <th>XL</th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+               </tr>
+               <tr>
+                  <th>2XL</th>
+                  <th></th>
+                  <th></th>
+                  <th></th>      
+               </tr>
+            </table>
+         </div>
+         <div class="tabla tabla2">
+            <table border="1" cellspacing="0" cellppading="4">
+               <tr>
+                  <th>ROPA INTERIOR MASCULINA</th>
+                  <th colspan="2">Medidas</th>
+               </tr>
+               <tr>
+                  <th>TALLA</th>
+                  <th>CINTURA</th>
+               </tr>
+               <tr>
+                  <th>M</th>
+                  <th></th>
+               </tr>
+               <tr>
+                  <th>L</th>
+                  <th></th>
+               </tr>
+               <tr>
+                  <th>XL</th>
+               <th></th>
+               </tr>
+               <tr>
+                  <th>2XL</th>
+                  <th></th>
+               </tr>
+               <tr>
+                  <th>3XL</th>
+                  <th></th>
+               </tr>
+            </table>
+         </div> 
+      </section>
+         <!--Formulario-->
+      <div class="caja1">
+         <form action="enviar.php" method="post" enctype="text/plain"></form>
+            <div class="form form1">
+               <label for="name">Nombre</label>
+               <input type="text" name="name" required>
+               <label for="apellido">Apellido</label>
+               <input type="text" name="apellido" required>
+               <label for="celular">Celular</label>
+               <input type="numbers" name="celular" required>
+               <label for="email">Email</label>
+               <input type="mail" required>
+            </div>
+            <div class="form form2">
+               <textarea name="" id="" cols="30" rows="10" placeholder="Dejanos tu comentario" required></textarea>
+               <input type="submit">
+               <input type="reset">
+            </div>
+         </form>
+      </div>
+   </main>
+<!--Pie de pagina-->
+   <footer>
+      <section class="ubicacion">
+         <div>
+            <p>Ubicacion:</p>
+            <p>Gregorio de laferrere</p>
+            <p>Av.Luro 6199</p>
+         </div>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13112.795050323446!2d-58.59344837148376!3d-34.750585586745046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc5a69e7bb89f%3A0x2047f7a9e096ceb5!2sAv.%20Luro%206199%2C%20B1757ARE%20Gregorio%20de%20Laferrere%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1652475028437!5m2!1ses!2sar" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+      </section>
+      <section class="contacto">
+         <ul>
+            <li><a href="pages/politica de devolucion.html">Politica de devolucion</a></li>
+            <li>Contacto</li>
+            <li>Email:lenceriamelfrancine@gmail.com</li>
+         </ul>
+      </section>
+   </footer>      
+   <script src="js/wow.min.js"></script>
+   <script>
+   new WOW().init();
+   </script>
+</body>
+</html>
