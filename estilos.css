@@ -6,69 +6,68 @@
 @media only screen and (min-width:320px ){
     .nombre{
         font-family: 'Dancing Script';
-        margin-left: 15px;
+        color: black;
+        margin-left: 5px;
         animation: bounceInRight; 
         animation-duration: 4s; 
+        font-weight: bolder;
+        margin-left: 10px;
     }
     .header1{
         background-color: #85586F;
         border: 1px solid black;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 50px 45px 45px;
         min-width: 320px;
-    }
-    .header1 h1{
-        font-size: xx-large;
-        margin: 2px;
-    }
-    .header1 div input{
-        background-color: #AC7D88;
+        font-family: 'Times New Roman', Times, serif;
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: 80px 60px 50px;
     }
     .header1 div{
         grid-column: 1/2;
         grid-row: 3/4;
         justify-self: start;
-        margin: 10px;
     }
-    .header1 nav{
-        grid-column: 1/2;
-        grid-row: 2/3;
+    .header1 div input{
+        background-color: #AC7D88;
+        
     }
-    nav ul li{
-        list-style: none;
-        display: inline-block;
+    .nav{
         padding-top: 10px;
-        margin: 7px;
-        animation: bounceInRight; 
-        animation-duration: 2s;
+        padding-left: 10px;
     }
     nav a{
         color: black;
-        text-decoration: none;
-        font-size: x-large;
         font-weight: bolder;
     }
-    nav a:hover{
-        color: white;
+    .nav-link{
+        padding: 0%;
+        margin-right: 10px;
+    }
+
+    .form-control{
+        border: solid #85586f;
+    }
+    .navbar{
+        padding: 0%;
+        padding-left: 10px;
     }
     .header1 div{
         align-self: end;
-        margin: 10px 7px;
+        margin-bottom: 5px;
     }
-
     /* main----------------- */
 
-    main{
-        min-width: 320px;
+    .index{
         background-color: #AC7D88;
-        min-width: 320px;
         display: grid;
         grid-template-columns: 1;
-        grid-template-rows: 270px 321px 378px;
+        grid-template-rows: 350px 440px 580px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bolder;
+        color: black;
     }
 
-    main .vista{
+    .index .vista{
         text-align: center;
         font-size: medium;
         border: 10px solid #85586F;
@@ -80,37 +79,26 @@
         padding-bottom: 10px;
     }
     
-    main h2{
+    .index h2{
         text-align: center;
         margin: 0px;
         text-decoration: underline;
     }
-    main section{
+    .index section{
         grid-row: 2/3;
     }
-    .form.form1{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 10px 40px;
+    .form-check{
+        position: initial;
     }
-    .caja1{
-        grid-row: 3/4;
-    }
-    .caja1 .form.form2{
-        padding: 10px 25px;
-    }
-    .form.form2{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
+    .guia{
+        padding: 15px;
     }
     .tabla{
-        font-size: small;
-        margin-block: 10px;
+        font-size: 90%;
+        text-align: center;
     }
-    input, textarea{
-        background-color: #DEB6AB;
+    .form-check-input{
+        position: initial;
     }
     div.tabla.tabla1{
         display: flex;
@@ -126,16 +114,40 @@
         padding: 0px;
         
     }
+    .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
+        position: initial;
+    }
     
+    .caja1{
+        grid-row: 3/4;
+        position: initial;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-primary {
+        background-color: #85586F;
+        border: solid #85586F;
+        color: black;
+        
+    }
+    .cajabotom{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
     
     /* footer------------- */
     footer{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bolder;
+        color: black;
         min-width: 320px;
         background-color: #85586F;
         min-width: 320px;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 388px 64px;
+        grid-template-rows: 450px 100px;
     }
     .ubicacion{
         padding-top: 20px;
@@ -152,10 +164,10 @@
 
     .contacto{
         font-weight: bolder;
-        margin-top: 10px;
-        margin-left: 10px;
-        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-top: 10px;
         grid-row: 2/3;
+        text-align: center;
     }
     .contacto ul li{
         list-style: none;
@@ -212,7 +224,7 @@ img:hover{
     height: 155px;
     width: 155px;
 }
-main.masculino{
+.masculino{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 350px 250px;
@@ -243,7 +255,18 @@ main.masculino{
     margin: 5px;
 
 }
+/* politica de devolucion----------- */
+.politica{
+    background-color: #AC7D88;
+    min-height: 1250px;
+    padding-top: 20px;
+    text-align: center;
+}
 
+.politica p{
+    margin: 0px;
+    padding-bottom: 15px;
+}
 }
 
 /* telefono modo horizontal------------- */
@@ -251,7 +274,7 @@ main.masculino{
     .header1{
         min-width: 479px;
     }
-    main{
+    .index{
         min-width: 479px;
     }
     article.vista{
@@ -281,12 +304,20 @@ main.masculino{
         text-align: center;
     }
 
-    /* paginas----------------- */
-
+    /* politica de devolucion----------------- */
+    .politica{
+        background-color: #AC7D88;
+        font-family: 'Times New Roman', Times, serif;
+        min-height: 550px;
+    }
+    .politica p{
+        margin: 0px;
+        padding-bottom: 15px;
+    }
 }
 /* tablets pequeñas------------------- */
 @media only screen and (min-width:600px){
-    main{
+    .index{
         min-width: 600px;
     }
     main .vista{
@@ -322,27 +353,27 @@ main.masculino{
     .header1{
         min-width: 768px;
     }
-    main{
+    .index{
         min-width: 768px;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 270px 380px 378px;
+        grid-template-rows: 340px 460px 578px;
     }
-    main .guia{
+    .index .guia{
         padding: 10px 300px 5px;
     }
-    main .tabla{
+    .index .tabla{
         font-size: large;
     }
     .caja1 .form1{
         padding-left: 80%;
         
     }
-    main .vista{
+    .index .vista{
         padding: 20px 40px 70px;
         border: 40px solid #85586F;
     }
-    main .tabla{
+    .index .tabla{
         padding: 10px 195px 10px;
     }
     .caja1 .form1{
@@ -373,30 +404,24 @@ main.masculino{
     min-width: 100vw;
     position: fixed;
 }
-main{
+.index{
     min-width: 1024px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 510px 380px 378px;
+    grid-template-rows: 510px 480px 600px;
 }
-main .vista{
+.index .vista{
     margin-top: 142px;
     padding: 50px 160px 60px;
     border: 45x solid #85586F;
 }
+
 .vista p{
     font-size: large;
 }
-main .tabla{
-    padding: 10px 320px 10px;
-}
-.caja1 .form1{
-    padding: 10px 410px 10px;
-}
-.caja1 .form.form2{
-    padding: 10px 360px;
-}
 
+
+    
 /* paginas-------------- */
 
 }
@@ -406,14 +431,12 @@ main .tabla{
 /*header*/
 .header1 .nombre{
     font-size: 300%;
-    margin: 0px 20px;
     animation: bounceInRight; 
     animation-duration: 4s; 
-    
 }
 .header1{
     background-color: #85586F;
-    min-height: 120px;
+    height: 175px;
     min-width: 100vw;
     position: fixed;
     top: 0px;
@@ -422,11 +445,23 @@ main .tabla{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
 }
+nav ul li a{
+    font-size: xx-large;
+    margin-right: 15px;
+}
+nav ul li{
+    margin: 0%;
+}
+.navbar-expand-md .navbar-nav .nav-link{
+    padding: 0%;
+}
 .header1 div{
     justify-self: end;
     align-self: end;
     grid-column: 2/3;
     grid-row: 2/3;
+    margin: 0%;
+    margin-left: 20px;
 }
 .header1 nav{
     grid-column: 1/2;
@@ -434,42 +469,29 @@ main .tabla{
 }
 .header1 div input{
     font-size: large;
-}
-nav ul li a{
-    font-size: xx-large;
-}
-nav ul li{
-    animation: bounceInRight; 
-    animation-duration: 4s;
-    list-style: none;
-    display: inline-block;
-    margin: 15px;
-}
-nav a{
-    color: black;
-    text-decoration: none;
-    font-weight: bolder;
-}
-nav a:hover{
-    color: white;
-    
+    margin-bottom: 5px;
 }
 
 /* main -------*/
-main{
+.index{
     min-width: 1200px;
     background-color: #AC7D88;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 640px 600px 600px;
 }
-main .vista{
+
+.index .vista{
     font-size: x-large;
-    padding: 65px 200px 80px;
+    padding: 20px 200px 80px;
     margin-top: 90px;
     border: 85px solid #85586f ;
 }
 .vista p{
     font-size: x-large;
+}
+h2.guia{
+    padding-bottom: 20px;
 }
 div.tabla.tabla1{
     display: flex;
@@ -484,33 +506,14 @@ div.tabla.tabla2{
     padding: 0px;
     
 }
-main .tabla{
+.index .tabla{
     font-size: x-large;
 }
-.form.form1{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0px 500px 10px;
-}
-.caja1 .form.form2{
-    padding: 10px 450px;
-}
-.form.form2{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-input, textarea{
-    background-color: #DEB6AB;
+.btn-primary {
+    background-color: white;
+    color: black;
 }
 
-.caja1 textarea{
-    font-size: large;
-}
-.form2 input{
-    font-size: large;
-}
 /*paginas-------------------*/
 .header2{
     background-color: #85586F;
@@ -571,13 +574,11 @@ main.masculino{
     justify-content: space-between;
 }
 .politica{
+    margin-top: 175px;
+    padding: 20px 20px;
+    text-align: left;
     min-height: 500px;
-    font-weight: bolder;
-    padding: 200px 50px 75px 50px;
     font-size: x-large;
-}
-.politica .estilos{
-    list-style: circle;
 }
 /*footer */
 footer{
@@ -593,7 +594,7 @@ footer{
     margin: 20px;
 }
 .ubicacion p{
-    text-align: left;
+    text-align: center;
     font-size: large;
 }
 .contacto{
