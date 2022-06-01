@@ -188,9 +188,6 @@
 body{
     font-family: 'Times New Roman', Times, serif;
 }
-.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
-    padding: 0%;
-}
 .header2.masculino{
     background-color: #85586F;
     display: grid;
@@ -236,32 +233,44 @@ body{
 .header2 .navbar{
     padding-left: 5px;
 }
+/* main----masculino--320------ */
 main.masculino{
     background-color: #AC7D88;
     min-height: 800px;
     padding: 0%;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
-.card{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #AC7D88;
+.fila1{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
-div.card-body{
+.div--paginacion{
+    padding: 0%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.page-link{
+    position: initial;
+    color: black;
+    border: 1px solid black;
     background-color: #85586F;
 }
+.card{
+    margin-bottom: 10px;
+}
+
 .masculino .btn-primary{
     background-color: #AC7D88;
 }
 .div--paginacion{
-    padding: 0%;
     background-color: #AC7D88;
     border: 2px solid #AC7D88;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
 }
 .div--paginacion ul{
     padding: 0%;
@@ -318,9 +327,6 @@ main.femenino{
     background-color: #AC7D88;
     min-height: 800px;
     padding: 0%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 /*otros 320px */
 .header2.otros{
@@ -366,33 +372,8 @@ main.otros{
     background-color: #AC7D88;
     min-height: 800px;
     padding: 0%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
-.otros.card{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #AC7D88;
-}
-.otros.div.card-body{
-    background-color: #85586F;
-}
-.otros .btn-primary{
-    background-color: #AC7D88;
-}
-.otros.div--paginacion{
-    padding: 0%;
-    background-color: #AC7D88;
-    border: 2px solid #AC7D88;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.otros.div--paginacion ul{
-    padding: 0%;
-    margin: 0px;
-}
+
 
 
 /* politica de devolucion----------- */
@@ -634,6 +615,7 @@ a.nav-link{
 }
 .nav{
     align-self: flex-end;
+    padding-top: 20px;
 }
 nav ul li{
     margin: 0%;
@@ -669,7 +651,7 @@ nav ul li{
 
 .index .vista{
     font-size: x-large;
-    padding: 20px 200px 80px;
+    padding: 40px 150px 80px;
     margin-top: 90px;
     border: 85px solid #85586f ;
 }
@@ -679,25 +661,8 @@ nav ul li{
 h2.guia{
     padding-bottom: 20px;
 }
-div.tabla.tabla1{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0px;
-}
-div.tabla.tabla2{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0px;
-    
-}
 .index .tabla{
     font-size: x-large;
-}
-.btn-primary {
-    background-color: white;
-    color: black;
 }
 
 /*paginas-------------------*/
@@ -733,6 +698,9 @@ div.tabla.tabla2{
     grid-row: 2/3;
     align-self: flex-end;
 }
+.header2.masculino nav ul li a{
+    font-size: xx-large;
+}
 .header2 div input{
     font-size: large;
     margin-bottom: 5px;
@@ -741,11 +709,19 @@ div.tabla.tabla2{
 /* main--masculino----1200px */
 
 main.masculino{
-    min-height: 2000px;
     margin-top: 175px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 500px 500px 500px;
+}
+.fila1{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.div--paginacion{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 main.masculino .card{
@@ -779,6 +755,7 @@ main.masculino .card{
     margin-left: 20px;
 }
 .header2.femenino nav{
+    align-self: flex-end;
     grid-column: 1/2;
     grid-row: 2/3;
 }
@@ -816,6 +793,7 @@ main.masculino .card{
     margin-left: 20px;
 }
 .header2.otros nav{
+    align-self: flex-end;
     grid-column: 1/2;
     grid-row: 2/3;
 }
