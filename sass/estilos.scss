@@ -1,0 +1,779 @@
+/* variables------------------- */
+/* colores */
+$color1: #85586F;
+$color2: #AC7D88;
+/* medidas----- */
+$medium: 120%;
+$large: 140%;
+$medium:129%;
+/* ---------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media only screen and (min-width:320px ){
+    .header1{
+        padding: 0%;
+        background-color: $color1;
+        border: 1px solid black;
+        min-width: 320px;
+        font-family: 'Times New Roman', Times, serif;
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: 90px 60px 50px;
+        .nombre{
+            font-family: 'Dancing Script';
+            color: black;
+            animation: bounceInRight; 
+            animation-duration: 4s; 
+            font-weight: bolder;
+            padding-left: 10px;
+            margin-bottom: 0px;
+        }
+        div{
+            grid-column: 1/2;
+            grid-row: 3/4;
+            justify-self: start;
+            input{
+                background-color: #AC7D88;
+                
+            }
+            .navbar{
+                padding: 0%;
+                padding-left: 10px;
+            }
+            .form-control{
+                border: solid #85586f;
+            }
+        }
+        .nav{
+            padding-left: 6px;
+            align-self: center;
+            a{
+                color: black;
+                font-weight: bolder;
+                font-size: $large;
+                &:hover{
+                    color: white;
+                }
+            }
+            .nav-link{
+                padding: 0%;
+                padding-right: 10px;
+            }
+            
+        }
+    }
+
+    
+    /* main----------------- */
+    .row{
+        margin: 0%;
+    }
+    .index{
+        background-color: $color2;
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: 350px 480px 580px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bolder;
+        color: black;
+        .vista{
+            text-align: center;
+            font-size: medium;
+            border: 10px solid #85586F;
+            grid-row: 1/2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2{
+                padding-bottom: 10px;
+            }
+        }
+        h2{
+            text-align: center;
+            margin: 0px;
+            text-decoration: underline;
+        }
+        section{
+            grid-row: 2/3;
+            .guia{
+                padding: 15px;
+            }
+            .tabla{
+                font-size: 100%;
+                text-align: center;
+            }
+            .tabla1{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                padding: 0px;
+                margin-bottom: 20px;
+            }
+            .tabla2{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                padding: 0px;
+            }
+        }
+        .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
+            position: initial;
+        }
+        .caja1{
+            grid-row: 3/4;
+            position: initial;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .btn-primary {
+                background-color: #85586F;
+                border: solid #85586F;
+                color: black;
+                
+            }
+            .cajabotom{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+    }
+
+
+    /* footer------------- */
+    footer{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bolder;
+        color: black;
+        background-color: #85586F;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 450px 100px;
+        .ubicacion{
+            padding-top: 20px;
+            text-align: center;
+            font-weight: bolder;
+            grid-row: 1/2;
+            padding: 0%;
+            p{
+                text-align: center;
+                margin-bottom: 0px;
+            }
+            div{
+                    margin-bottom: 10px;
+            }
+        }
+        .contacto{
+            font-weight: bolder;
+            padding-top: 10px;
+            grid-row: 2/3;
+            text-align: center;
+            ul li{
+                list-style: none;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+                &:hover{
+                    color: white;
+                } 
+            }
+        }
+        .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
+            position: initial;
+        }
+    }
+
+/* paginas-----------320px----------- */
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+.header2.masculino{
+    padding: 0%;
+    background-color: $color1;
+    border: 1px solid black;
+    min-width: 320px;
+    font-family: 'Times New Roman', Times, serif;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 90px 60px 50px;
+    .nombre{
+        font-family: 'Dancing Script';
+        color: black;
+        animation: bounceInRight; 
+        animation-duration: 4s; 
+        font-weight: bolder;
+        padding-left: 10px;
+        margin-bottom: 0px;
+    }
+    div{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        justify-self: start;
+        input{
+            background-color: #AC7D88;
+            
+        }
+        .navbar{
+            padding: 0%;
+            padding-left: 10px;
+        }
+        .form-control{
+            border: solid #85586f;
+        }
+    }
+    .nav{
+        padding-left: 6px;
+        padding-right: 0px;
+        align-self: center;
+        a{
+            color: black;
+            font-weight: bolder;
+            font-size: $medium;
+        }
+        .nav-link{
+            padding: 0%;
+            padding-right: 10px;
+        }
+        
+    }
+}
+/* main----masculino--320------ */
+main.masculino{
+    background-color: #AC7D88;
+    min-height: 800px;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+}
+.fila1{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.div--paginacion{
+    padding: 0%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.page-link{
+    position: initial;
+    color: black;
+    border: 1px solid black;
+    background-color: #85586F;
+}
+.card{
+    margin-bottom: 10px;
+}
+
+.masculino .btn-primary{
+    background-color: #AC7D88;
+}
+.div--paginacion{
+    background-color: #AC7D88;
+    border: 2px solid #AC7D88;
+}
+.div--paginacion ul{
+    padding: 0%;
+    margin: 0px;
+}
+
+/* apartado femenino------------- */
+.header2.femenino{
+    background-color: #85586F;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 90px 50px 50px;
+}
+.header2.femenino .nombre{
+    margin: 0px;
+    padding-left: 10px;
+    animation: bounceInRight; 
+    animation-duration: 4s; 
+}
+.header2.femenino div{
+    grid-row: 3/4;
+    font-size: medium;
+    align-self: end;
+}
+.header2.femenino .nav{
+    grid-row: 2/3;
+    padding: 0%;
+    padding-left: 5px;
+    padding-top: 7px;
+}
+.header2.femenino div{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    justify-self: start;
+}
+.header2.femenino input{
+    background-color: #AC7D88;
+    
+}
+.header2.femenino div{
+    align-self: end;
+    margin-bottom: 5px;
+}
+.header2.femenino nav{
+    padding: 0%;
+}
+.header2.femenino nav ul li a{
+    font-size: 20px;
+}
+.header2.femenino .navbar{
+    padding-left: 5px;
+}
+main.femenino{
+    background-color: #AC7D88;
+    min-height: 800px;
+    padding: 0%;
+}
+/*otros 320px */
+.header2.otros{
+    background-color: #85586F;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 90px 50px 50px;
+}
+.header2.otros .nombre{
+    margin: 0px;
+    padding-left: 10px;
+    animation: bounceInRight; 
+    animation-duration: 4s; 
+}
+.header2.otros div{
+    grid-row: 3/4;
+    font-size: medium;
+    align-self: end;
+}
+.header2.otros .nav{
+    grid-row: 2/3;
+    padding: 0%;
+    padding-left: 5px;
+    padding-top: 7px;
+}
+.header2.otros div{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    justify-self: start;
+}
+.header2.otros nav{
+    padding: 0%;
+}
+.header2.otros nav ul li a{
+    font-size: large;
+}
+.header2.otros .navbar{
+    padding-left: 5px;
+}
+
+/* main de otros----------320px----- */
+main.otros{
+    background-color: #AC7D88;
+    min-height: 800px;
+    padding: 0%;
+}
+
+
+
+/* politica de devolucion----------- */
+.politica{
+    background-color: #AC7D88;
+    min-height: 1250px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.politica p{
+    margin: 0px;
+    padding-bottom: 15px;
+}
+
+}
+
+/* telefono modo horizontal------------- */
+@media only screen and (min-width:479px){
+    .header1{
+        min-width: 479px;
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: 50px 60px 40px;
+        .nav{
+            align-self: center;
+            padding-top: 0px;
+            a{
+                font-size: x-large;
+            }
+        }
+    }
+}
+/* tablets pequeñas------------------- */
+@media only screen and (min-width:600px){
+    .index{
+        min-width: 600px;
+        .vista{
+            border: 25px solid #85586F;
+        }
+        .tabla{
+            padding: 10px 110px 10px;
+        }
+        .caja1{
+            .form1{
+                padding: 10px 200px ;
+            }
+            .form2{
+                padding: 10px 180px;
+            }
+        }
+    }   
+
+}
+/* tablets de 10 pulgadas-----------*/
+@media only screen and (min-width:768px){
+    .header1{
+        min-width: 768px;
+        .nombre{
+            padding-right: 8px;
+            font-size: 300%;
+        }
+    }
+
+
+    /* main-------768-----index---- */
+    .index{
+        min-width: 768px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 340px 460px 578px;
+        .vista{
+            padding: 20px 40px 70px;
+            border: 40px solid #85586F;
+        }
+        .guia{
+            padding: 10px 300px 5px;
+        }
+        .tabla{
+            font-size: large;
+        }
+        .tabla{
+            padding: 10px 195px 10px;
+        }
+        .form2{
+            padding: 10px 260px;
+        }
+    }
+    
+    
+    
+    /* masculino---header----768px */
+    .header2.masculino{
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: 70px 60px 50px;
+    }
+    .header2.masculino nav ul li a{
+        font-size: xx-large;
+    }
+    .header2.masculino h1{
+        font-size: 320%;
+    }
+    .header .nav{
+        padding-top: 0px;
+        align-self: center;
+    }
+}
+/* tablets modo horizonta ----------- */
+@media only screen and (min-width:1024px){
+    .header1{
+        position: fixed;
+        padding: 0px;
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: 80px 50px 50px;
+        .nombre{
+            font-size: 370%;
+        }
+    }
+    .index{
+        min-width: 1024px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100vh 620px 600px;
+        .vista{
+            margin-top: 140px;
+            padding: 50px 160px 60px;
+            border: 45x solid #85586F;
+            font-size: x-large;
+        }
+        section{
+            .tabla{
+                font-size: x-large;
+            }
+        }
+    }
+
+/* paginas-------------- */
+.header2{
+    .nav{
+        padding-top: 0px;
+        align-self: center;
+    }
+}
+}
+/* Portatiles-------------- */
+@media only screen and (min-width:1200px){
+    /*pagina principal*/
+/*header*/
+.header1{
+    background-color: #85586F;
+    height: 175px;
+    min-width: 100vw;
+    position: fixed;
+    top: 0px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    .nombre{
+        margin: 0%;
+        font-size: 400%;
+        padding-left: 15px;
+        grid-column: 1/3;
+    }
+    .nav{
+        align-self: flex-end;
+        padding-top: 20px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        .nav-link{
+            padding-right: 20px;
+        }
+        ul li{
+            margin: 0%;
+        }
+        a{
+            font-size: xx-large;
+        }
+    }
+    div{
+        justify-self: end;
+        align-self: end;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        margin: 0%;
+        input{
+            font-size: large;
+            margin-bottom: 5px;
+        }
+    }
+}
+/*footer */
+footer{
+    background-color: #85586F;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    .ubicacion{
+        justify-self: start;
+        margin: 20px;
+    }
+    .contacto{
+        font-size: large;
+        justify-self: end;
+        align-self: end;
+        margin: 10px;
+        margin-right: 10px;
+        grid-column: 21/2;
+        grid-row: 1/2;
+    }
+}
+
+/* main -------*/
+.index{
+    min-width: 1200px;
+    background-color: #AC7D88;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 100vh 600px 600px;
+    .vista{
+        font-size: x-large;
+        padding: 40px 150px 80px;
+        margin-top: 110px;
+        border: 65px solid #85586f ;
+    }
+}
+
+
+/*paginas-------------------*/
+
+/* masculino-----1200px------- */
+.header2.masculino{
+    background-color: #85586F;
+    height: 175px;
+    min-width: 100vw;
+    position: fixed;
+    top: 0px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    .nombre{
+        margin: 0%;
+        font-size: 400%;
+        padding-left: 15px;
+        grid-column: 1/3;
+    }
+    .nav{
+        align-self: flex-end;
+        padding-top: 20px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        .nav-link{
+            padding-right: 20px;
+        }
+        ul li{
+            margin: 0%;
+        }
+        a{
+            font-size: xx-large;
+        }
+    }
+    div{
+        justify-self: end;
+        align-self: end;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        margin: 0%;
+        input{
+            font-size: large;
+            margin-bottom: 5px;
+        }
+    }
+}
+/* main--masculino----1200px */
+
+main.masculino{
+    margin-top: 175px;
+    position: initial;
+    .fila1{
+        padding-top: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .div--paginacion{
+        padding-top: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .card{
+        position: initial;
+    }
+}
+
+
+
+
+
+
+/* femenino-------1200px------ */
+.header2.femenino{
+    background-color: #85586F;
+    height: 175px;
+    min-width: 100vw;
+    position: fixed;
+    top: 0px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    }
+.header2.femenino .nombre{
+    margin: 0%;
+    grid-column: 1/3;
+    font-size: 400%;
+}
+.header2.femenino div{
+    justify-self: end;
+    align-self: end;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin: 0%;
+    margin-left: 20px;
+}
+.header2.femenino nav{
+    align-self: flex-end;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.header2.femenino .nav ul li a{
+    font-size: xx-large;
+}
+.header2.femenine div input{
+    font-size: large;
+    margin-bottom: 5px;
+}
+
+/* otros------1200px--- */
+.header2.otros{
+    background-color: #85586F;
+    height: 175px;
+    min-width: 100vw;
+    position: fixed;
+    top: 0px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.header2.otros .nombre{
+    margin: 0%;
+    grid-column: 1/3;
+    font-size: 400%;
+}
+.header2.otros div{
+    justify-self: end;
+    align-self: end;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin: 0%;
+    margin-left: 20px;
+}
+.header2.otros nav{
+    align-self: flex-end;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.header2.otros .nav ul li a{
+    font-size: xx-large;
+}
+.header2.otros div input{
+    font-size: large;
+    margin-bottom: 5px;
+}
+/* main de otros----------- */
+main.otros{
+    margin-top: 175px;
+}
+main.otros .card{
+    position: initial;
+}
+/* politica------1200px----- */
+.politica{
+    margin-top: 175px;
+    padding: 20px 20px;
+    text-align: left;
+    min-height: 500px;
+    font-size: x-large;
+}
+
+}
