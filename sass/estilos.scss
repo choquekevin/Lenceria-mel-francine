@@ -20,9 +20,11 @@ $medium:129%;
         min-width: 320px;
         font-family: 'Times New Roman', Times, serif;
         display: grid;
-        grid-template-columns: 1;
+        grid-template-columns: 80vw 19vw;
         grid-template-rows: 90px 60px 50px;
         .nombre{
+            grid-column: 1/2;
+            grid-row: 1/2;
             font-family: 'Dancing Script';
             color: black;
             animation: bounceInRight; 
@@ -47,7 +49,19 @@ $medium:129%;
                 border: solid #85586f;
             }
         }
+        .carrito{
+            padding-top: 5px;
+            grid-column: 2/3;
+            grid-row: 1/2;
+            justify-self: end;
+            align-self: flex-start;
+            i{
+                font-size: x-large;
+            }
+        }
         .nav{
+            grid-column: 1/3;
+            grid-row: 2/3;
             padding-left: 6px;
             align-self: center;
             a{
@@ -75,7 +89,7 @@ $medium:129%;
         background-color: $color2;
         display: grid;
         grid-template-columns: 1;
-        grid-template-rows: 350px 480px 580px;
+        grid-template-rows:  350px 480px 640px;
         font-family: 'Times New Roman', Times, serif;
         font-weight: bolder;
         color: black;
@@ -91,6 +105,7 @@ $medium:129%;
                 padding-bottom: 10px;
             }
         }
+        
         h2{
             text-align: center;
             margin: 0px;
@@ -123,6 +138,7 @@ $medium:129%;
             position: initial;
         }
         .caja1{
+            border: 1px solid black;
             grid-row: 3/4;
             position: initial;
             display: flex;
@@ -139,8 +155,12 @@ $medium:129%;
                 flex-direction: row;
                 justify-content: center;
             }
+            h2{
+                padding-bottom: 20px;
+            }
         }
     }
+    
 
 
     /* footer------------- */
@@ -148,10 +168,11 @@ $medium:129%;
         font-family: 'Times New Roman', Times, serif;
         font-weight: bolder;
         color: black;
-        background-color: #85586F;
+        background: url('../img/wave-haikei\ \(2\).svg');
+        background-size: cover;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 450px 100px;
+        grid-template-rows: 450px 140px 80px;
         .ubicacion{
             padding-top: 20px;
             text-align: center;
@@ -181,13 +202,30 @@ $medium:129%;
                     color: white;
                 } 
             }
+            i{
+                font-size: x-large;
+            }
         }
         .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
             position: initial;
         }
+        .pagos{
+            justify-self: center;
+            align-self: center;
+            grid-row: 3/4;
+            img{
+                width: auto;
+                height: 30px;
+            }
+            p{
+                text-align: center;
+                margin: 0px;
+                padding-bottom: 5px;
+            }
+        }
     }
 
-/* paginas-----------320px----------- */
+/* /* paginas-----------320px----------- */
 body{
     font-family: 'Times New Roman', Times, serif;
 }
@@ -287,49 +325,54 @@ main.masculino{
 
 /* apartado femenino------------- */
 .header2.femenino{
-    background-color: #85586F;
+    padding: 0%;
+    background-color: $color1;
+    border: 1px solid black;
+    min-width: 320px;
+    font-family: 'Times New Roman', Times, serif;
     display: grid;
     grid-template-columns: 1;
-    grid-template-rows: 90px 50px 50px;
-}
-.header2.femenino .nombre{
-    margin: 0px;
-    padding-left: 10px;
-    animation: bounceInRight; 
-    animation-duration: 4s; 
-}
-.header2.femenino div{
-    grid-row: 3/4;
-    font-size: medium;
-    align-self: end;
-}
-.header2.femenino .nav{
-    grid-row: 2/3;
-    padding: 0%;
-    padding-left: 5px;
-    padding-top: 7px;
-}
-.header2.femenino div{
-    grid-column: 1/2;
-    grid-row: 3/4;
-    justify-self: start;
-}
-.header2.femenino input{
-    background-color: #AC7D88;
-    
-}
-.header2.femenino div{
-    align-self: end;
-    margin-bottom: 5px;
-}
-.header2.femenino nav{
-    padding: 0%;
-}
-.header2.femenino nav ul li a{
-    font-size: 20px;
-}
-.header2.femenino .navbar{
-    padding-left: 5px;
+    grid-template-rows: 90px 60px 50px;
+    .nombre{
+        font-family: 'Dancing Script';
+        color: black;
+        animation: bounceInRight; 
+        animation-duration: 4s; 
+        font-weight: bolder;
+        padding-left: 10px;
+        margin-bottom: 0px;
+    }
+    div{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        justify-self: start;
+        input{
+            background-color: #AC7D88;
+            
+        }
+        .navbar{
+            padding: 0%;
+            padding-left: 10px;
+        }
+        .form-control{
+            border: solid #85586f;
+        }
+    }
+    .nav{
+        padding-left: 6px;
+        padding-right: 0px;
+        align-self: center;
+        a{
+            color: black;
+            font-weight: bolder;
+            font-size: $medium;
+        }
+        .nav-link{
+            padding: 0%;
+            padding-right: 10px;
+        }
+        
+    }
 }
 main.femenino{
     background-color: #AC7D88;
@@ -338,41 +381,54 @@ main.femenino{
 }
 /*otros 320px */
 .header2.otros{
-    background-color: #85586F;
+    padding: 0%;
+    background-color: $color1;
+    border: 1px solid black;
+    min-width: 320px;
+    font-family: 'Times New Roman', Times, serif;
     display: grid;
     grid-template-columns: 1;
-    grid-template-rows: 90px 50px 50px;
-}
-.header2.otros .nombre{
-    margin: 0px;
-    padding-left: 10px;
-    animation: bounceInRight; 
-    animation-duration: 4s; 
-}
-.header2.otros div{
-    grid-row: 3/4;
-    font-size: medium;
-    align-self: end;
-}
-.header2.otros .nav{
-    grid-row: 2/3;
-    padding: 0%;
-    padding-left: 5px;
-    padding-top: 7px;
-}
-.header2.otros div{
-    grid-column: 1/2;
-    grid-row: 3/4;
-    justify-self: start;
-}
-.header2.otros nav{
-    padding: 0%;
-}
-.header2.otros nav ul li a{
-    font-size: large;
-}
-.header2.otros .navbar{
-    padding-left: 5px;
+    grid-template-rows: 90px 60px 50px;
+    .nombre{
+        font-family: 'Dancing Script';
+        color: black;
+        animation: bounceInRight; 
+        animation-duration: 4s; 
+        font-weight: bolder;
+        padding-left: 10px;
+        margin-bottom: 0px;
+    }
+    div{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        justify-self: start;
+        input{
+            background-color: #AC7D88;
+            
+        }
+        .navbar{
+            padding: 0%;
+            padding-left: 10px;
+        }
+        .form-control{
+            border: solid #85586f;
+        }
+    }
+    .nav{
+        padding-left: 6px;
+        padding-right: 0px;
+        align-self: center;
+        a{
+            color: black;
+            font-weight: bolder;
+            font-size: $medium;
+        }
+        .nav-link{
+            padding: 0%;
+            padding-right: 10px;
+        }
+        
+    }
 }
 
 /* main de otros----------320px----- */
@@ -404,7 +460,7 @@ main.otros{
     .header1{
         min-width: 479px;
         display: grid;
-        grid-template-columns: 1;
+        grid-template-columns: 80vw 19vw;
         grid-template-rows: 50px 60px 40px;
         .nav{
             align-self: center;
@@ -412,6 +468,9 @@ main.otros{
             a{
                 font-size: x-large;
             }
+        }
+        .carrito{
+            padding-right: 5px;
         }
     }
 }
@@ -452,7 +511,7 @@ main.otros{
         min-width: 768px;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 340px 460px 578px;
+        grid-template-rows: 340px 460px 650px;
         .vista{
             padding: 20px 40px 70px;
             border: 40px solid #85586F;
@@ -506,7 +565,7 @@ main.otros{
         min-width: 1024px;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 100vh 620px 600px;
+        grid-template-rows: 100vh 620px 650px;
         .vista{
             margin-top: 140px;
             padding: 50px 160px 60px;
@@ -519,6 +578,7 @@ main.otros{
             }
         }
     }
+    
 
 /* paginas-------------- */
 .header2{
@@ -535,7 +595,6 @@ main.otros{
 .header1{
     background-color: #85586F;
     height: 175px;
-    min-width: 100vw;
     position: fixed;
     top: 0px;
     border: 1px solid black;
@@ -574,18 +633,40 @@ main.otros{
             margin-bottom: 5px;
         }
     }
+    .carrito{
+        padding-right: 10px;
+    }
+}
+/* main -------*/
+.index{
+    min-width: 1200px;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 100vh 600px 650px;
+    .vista{
+        background: rgb(133,88,111);
+    background: radial-gradient(circle, rgba(133,88,111,1) 17%, rgba(172,125,136,1) 60%);
+        font-size: x-large;
+        padding: 40px 150px 80px;
+        margin-top: 110px;
+        border: 65px solid #85586f ;
+    }
 }
 /*footer */
 footer{
     background-color: #85586F;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: 430px;
     .ubicacion{
+        grid-column: 1/2;
+        grid-row: 1/2;
         justify-self: start;
         margin: 20px;
     }
     .contacto{
+        grid-column: 2/3;
+        grid-row: 1/2;
         font-size: large;
         justify-self: end;
         align-self: end;
@@ -594,20 +675,14 @@ footer{
         grid-column: 21/2;
         grid-row: 1/2;
     }
-}
-
-/* main -------*/
-.index{
-    min-width: 1200px;
-    background-color: #AC7D88;
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 100vh 600px 600px;
-    .vista{
-        font-size: x-large;
-        padding: 40px 150px 80px;
-        margin-top: 110px;
-        border: 65px solid #85586f ;
+    .pagos{
+        justify-self: center;
+        align-self: flex-end;
+        grid-row: 1/2;
+        grid-column: 1/3;
+        p{
+            padding: 0%;
+        }
     }
 }
 
@@ -657,6 +732,10 @@ footer{
             margin-bottom: 5px;
         }
     }
+    .redes{
+        grid-template-columns: 2/3;
+        grid-row: 1/2;
+    }
 }
 /* main--masculino----1200px */
 
@@ -696,31 +775,42 @@ main.masculino{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    .nombre{
+        margin: 0%;
+        font-size: 400%;
+        padding-left: 15px;
+        grid-column: 1/3;
     }
-.header2.femenino .nombre{
-    margin: 0%;
-    grid-column: 1/3;
-    font-size: 400%;
-}
-.header2.femenino div{
-    justify-self: end;
-    align-self: end;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    margin: 0%;
-    margin-left: 20px;
-}
-.header2.femenino nav{
-    align-self: flex-end;
-    grid-column: 1/2;
-    grid-row: 2/3;
-}
-.header2.femenino .nav ul li a{
-    font-size: xx-large;
-}
-.header2.femenine div input{
-    font-size: large;
-    margin-bottom: 5px;
+    .nav{
+        align-self: flex-end;
+        padding-top: 20px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        .nav-link{
+            padding-right: 20px;
+        }
+        ul li{
+            margin: 0%;
+        }
+        a{
+            font-size: xx-large;
+        }
+    }
+    div{
+        justify-self: end;
+        align-self: end;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        margin: 0%;
+        input{
+            font-size: large;
+            margin-bottom: 5px;
+        }
+    }
+    .redes{
+        grid-template-columns: 2/3;
+        grid-row: 1/2;
+    }
 }
 
 /* otros------1200px--- */
@@ -734,31 +824,42 @@ main.masculino{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-}
-.header2.otros .nombre{
-    margin: 0%;
-    grid-column: 1/3;
-    font-size: 400%;
-}
-.header2.otros div{
-    justify-self: end;
-    align-self: end;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    margin: 0%;
-    margin-left: 20px;
-}
-.header2.otros nav{
-    align-self: flex-end;
-    grid-column: 1/2;
-    grid-row: 2/3;
-}
-.header2.otros .nav ul li a{
-    font-size: xx-large;
-}
-.header2.otros div input{
-    font-size: large;
-    margin-bottom: 5px;
+    .nombre{
+        margin: 0%;
+        font-size: 400%;
+        padding-left: 15px;
+        grid-column: 1/3;
+    }
+    .nav{
+        align-self: flex-end;
+        padding-top: 20px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        .nav-link{
+            padding-right: 20px;
+        }
+        ul li{
+            margin: 0%;
+        }
+        a{
+            font-size: xx-large;
+        }
+    }
+    div{
+        justify-self: end;
+        align-self: end;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        margin: 0%;
+        input{
+            font-size: large;
+            margin-bottom: 5px;
+        }
+    }
+    .redes{
+        grid-template-columns: 2/3;
+        grid-row: 1/2;
+    }
 }
 /* main de otros----------- */
 main.otros{
