@@ -3,23 +3,30 @@
 $color1: #85586F;
 $color2: #AC7D88;
 /* medidas----- */
-$medium: 120%;
+$medium: 129%;
 $large: 140%;
-$medium:129%;
+$xlarge: 200%;
+
+
+
 /* ---------------------------- */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-@media only screen and (min-width:320px ){
+@media only screen and (min-width:320px) {
+
+    @mixin mixin1($bcolor, $width) {
+        background-color: $bcolor;
+        min-width: $width;
+    }
     .header1{
+        display: grid;
         padding: 0%;
-        background-color: $color1;
         border: 1px solid black;
         min-width: 320px;
-        font-family: 'Times New Roman', Times, serif;
-        display: grid;
+        @include mixin1(#85586F, 320px);
         grid-template-columns: 80vw 19vw;
         grid-template-rows: 90px 60px 50px;
         .nombre{
@@ -38,7 +45,7 @@ $medium:129%;
             grid-row: 3/4;
             justify-self: start;
             input{
-                background-color: #AC7D88;
+                background-color: $color2;
                 
             }
             .navbar{
@@ -46,7 +53,7 @@ $medium:129%;
                 padding-left: 10px;
             }
             .form-control{
-                border: solid #85586f;
+                border: solid $color2;
             }
         }
         .carrito{
@@ -96,7 +103,7 @@ $medium:129%;
         .vista{
             text-align: center;
             font-size: medium;
-            border: 10px solid #85586F;
+            border: 10px solid $color1;
             grid-row: 1/2;
             display: flex;
             flex-direction: column;
@@ -105,7 +112,6 @@ $medium:129%;
                 padding-bottom: 10px;
             }
         }
-        
         h2{
             text-align: center;
             margin: 0px;
@@ -128,10 +134,7 @@ $medium:129%;
                 margin-bottom: 20px;
             }
             .tabla2{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                padding: 0px;
+                @extend .tabla1;
             }
         }
         .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
@@ -145,8 +148,8 @@ $medium:129%;
             flex-direction: column;
             align-items: center;
             .btn-primary {
-                background-color: #85586F;
-                border: solid #85586F;
+                background-color: $color1;
+                border: solid $color1;
                 color: black;
                 
             }
@@ -224,239 +227,107 @@ $medium:129%;
             }
         }
     }
-
-/* /* paginas-----------320px----------- */
-body{
-    font-family: 'Times New Roman', Times, serif;
-}
-.header2.masculino{
-    padding: 0%;
-    background-color: $color1;
-    border: 1px solid black;
-    min-width: 320px;
-    font-family: 'Times New Roman', Times, serif;
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 90px 60px 50px;
-    .nombre{
-        font-family: 'Dancing Script';
-        color: black;
-        animation: bounceInRight; 
-        animation-duration: 4s; 
-        font-weight: bolder;
-        padding-left: 10px;
-        margin-bottom: 0px;
+    /* /* paginas-----------320px----------- */
+    body{
+        font-family: 'Times New Roman', Times, serif;
     }
-    div{
-        grid-column: 1/2;
-        grid-row: 3/4;
-        justify-self: start;
-        input{
-            background-color: #AC7D88;
-            
+    /* main----masculino--320------ */
+    .principal{
+        background-color: $color2;
+        min-height: 800px;
+        padding: 0%;
+        display: flex;
+        flex-direction: column;
+        .fila1{
+            padding-top: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            .card{
+                margin-bottom: 10px;
+                .btn-primary{
+                    background-color: #AC7D88;
+                    border: 0px;
+                }
+            }
         }
-        .navbar{
+        .div--paginacion{
             padding: 0%;
-            padding-left: 10px;
-        }
-        .form-control{
-            border: solid #85586f;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            background-color: $color2;
+            border: 2px solid $color2;
+            ul{
+                padding: 0%;
+                margin: 0px;
+            }
+            .page-link{
+                position: initial;
+                color: black;
+                border: 1px solid black;
+                background-color: $color1;
+            }
         }
     }
-    .nav{
-        padding-left: 6px;
-        padding-right: 0px;
-        align-self: center;
-        a{
-            color: black;
-            font-weight: bolder;
-            font-size: $medium;
+    /* femenino */
+    .principal1{
+        background-color: $color2;
+        min-height: 800px;
+        padding: 0%;
+        display: flex;
+        flex-direction: column;
+        .fila1{
+            padding-top: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            .card{
+                margin-bottom: 10px;
+                .btn-primary{
+                    background-color: #AC7D88;
+                    border: 0px;
+                }
+            }
         }
-        .nav-link{
+        .div--paginacion{
             padding: 0%;
-            padding-right: 10px;
-        }
-        
-    }
-}
-/* main----masculino--320------ */
-main.masculino{
-    background-color: #AC7D88;
-    min-height: 800px;
-    padding: 0%;
-    display: flex;
-    flex-direction: column;
-}
-.fila1{
-    padding-top: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.div--paginacion{
-    padding: 0%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.page-link{
-    position: initial;
-    color: black;
-    border: 1px solid black;
-    background-color: #85586F;
-}
-.card{
-    margin-bottom: 10px;
-}
-
-.masculino .btn-primary{
-    background-color: #AC7D88;
-}
-.div--paginacion{
-    background-color: #AC7D88;
-    border: 2px solid #AC7D88;
-}
-.div--paginacion ul{
-    padding: 0%;
-    margin: 0px;
-}
-
-/* apartado femenino------------- */
-.header2.femenino{
-    padding: 0%;
-    background-color: $color1;
-    border: 1px solid black;
-    min-width: 320px;
-    font-family: 'Times New Roman', Times, serif;
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 90px 60px 50px;
-    .nombre{
-        font-family: 'Dancing Script';
-        color: black;
-        animation: bounceInRight; 
-        animation-duration: 4s; 
-        font-weight: bolder;
-        padding-left: 10px;
-        margin-bottom: 0px;
-    }
-    div{
-        grid-column: 1/2;
-        grid-row: 3/4;
-        justify-self: start;
-        input{
-            background-color: #AC7D88;
-            
-        }
-        .navbar{
-            padding: 0%;
-            padding-left: 10px;
-        }
-        .form-control{
-            border: solid #85586f;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            background-color: $color2;
+            border: 2px solid $color2;
+            ul{
+                padding: 0%;
+                margin: 0px;
+            }
+            .page-link{
+                position: initial;
+                color: black;
+                border: 1px solid black;
+                background-color: $color1;
+            }
         }
     }
-    .nav{
-        padding-left: 6px;
-        padding-right: 0px;
-        align-self: center;
-        a{
-            color: black;
-            font-weight: bolder;
-            font-size: $medium;
-        }
-        .nav-link{
-            padding: 0%;
-            padding-right: 10px;
-        }
-        
-    }
-}
-main.femenino{
-    background-color: #AC7D88;
-    min-height: 800px;
-    padding: 0%;
-}
-/*otros 320px */
-.header2.otros{
-    padding: 0%;
-    background-color: $color1;
-    border: 1px solid black;
-    min-width: 320px;
-    font-family: 'Times New Roman', Times, serif;
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 90px 60px 50px;
-    .nombre{
-        font-family: 'Dancing Script';
-        color: black;
-        animation: bounceInRight; 
-        animation-duration: 4s; 
-        font-weight: bolder;
-        padding-left: 10px;
-        margin-bottom: 0px;
-    }
-    div{
-        grid-column: 1/2;
-        grid-row: 3/4;
-        justify-self: start;
-        input{
-            background-color: #AC7D88;
-            
-        }
-        .navbar{
-            padding: 0%;
-            padding-left: 10px;
-        }
-        .form-control{
-            border: solid #85586f;
+    /* politica de devolucion----------- */
+    .politica{
+        background-color: $color2;
+        min-height: 1250px;
+        padding-top: 20px;
+        text-align: center;
+        p{
+            margin: 0px;
+            padding-bottom: 15px;
         }
     }
-    .nav{
-        padding-left: 6px;
-        padding-right: 0px;
-        align-self: center;
-        a{
-            color: black;
-            font-weight: bolder;
-            font-size: $medium;
-        }
-        .nav-link{
-            padding: 0%;
-            padding-right: 10px;
-        }
-        
-    }
-}
-
-/* main de otros----------320px----- */
-main.otros{
-    background-color: #AC7D88;
-    min-height: 800px;
-    padding: 0%;
-}
-
-
-
-/* politica de devolucion----------- */
-.politica{
-    background-color: #AC7D88;
-    min-height: 1250px;
-    padding-top: 20px;
-    text-align: center;
-}
-
-.politica p{
-    margin: 0px;
-    padding-bottom: 15px;
-}
-
 }
 
 /* telefono modo horizontal------------- */
-@media only screen and (min-width:479px){
+@media only screen and (min-width:479px) and (max-width:767px){
     .header1{
         min-width: 479px;
         display: grid;
@@ -473,32 +344,23 @@ main.otros{
             padding-right: 5px;
         }
     }
-}
-/* tablets pequeñas------------------- */
-@media only screen and (min-width:600px){
-    .index{
-        min-width: 600px;
-        .vista{
-            border: 25px solid #85586F;
-        }
-        .tabla{
-            padding: 10px 110px 10px;
-        }
-        .caja1{
-            .form1{
-                padding: 10px 200px ;
-            }
-            .form2{
-                padding: 10px 180px;
-            }
-        }
-    }   
 
+    .index{
+        .vista{
+            border: 6vw solid $color1;
+        }
+    }
 }
 /* tablets de 10 pulgadas-----------*/
 @media only screen and (min-width:768px){
     .header1{
+        grid-template-rows: 80px 50px 50px;
         min-width: 768px;
+        .nav{
+            a{
+                font-size: $xlarge;
+            }
+        }
         .nombre{
             padding-right: 8px;
             font-size: 300%;
@@ -513,8 +375,7 @@ main.otros{
         grid-template-columns: 1fr;
         grid-template-rows: 340px 460px 650px;
         .vista{
-            padding: 20px 40px 70px;
-            border: 40px solid #85586F;
+            border: 40px solid $color1;
         }
         .guia{
             padding: 10px 300px 5px;
@@ -530,37 +391,25 @@ main.otros{
         }
     }
     
-    
-    
-    /* masculino---header----768px */
-    .header2.masculino{
-        display: grid;
-        grid-template-columns: 1;
-        grid-template-rows: 70px 60px 50px;
-    }
-    .header2.masculino nav ul li a{
-        font-size: xx-large;
-    }
-    .header2.masculino h1{
-        font-size: 320%;
-    }
-    .header .nav{
-        padding-top: 0px;
-        align-self: center;
-    }
 }
 /* tablets modo horizonta ----------- */
 @media only screen and (min-width:1024px){
     .header1{
+        top: 0px;
         position: fixed;
         padding: 0px;
         display: grid;
-        grid-template-columns: 1;
         grid-template-rows: 80px 50px 50px;
         .nombre{
             font-size: 370%;
         }
+        .nav{
+            a{
+                font-size: $xlarge;
+            }
+        }
     }
+
     .index{
         min-width: 1024px;
         display: grid;
@@ -569,7 +418,7 @@ main.otros{
         .vista{
             margin-top: 140px;
             padding: 50px 160px 60px;
-            border: 45x solid #85586F;
+            border: 45x solid $color1;
             font-size: x-large;
         }
         section{
@@ -578,22 +427,63 @@ main.otros{
             }
         }
     }
-    
-
-/* paginas-------------- */
-.header2{
-    .nav{
-        padding-top: 0px;
-        align-self: center;
+    /* masculino */
+    .principal{
+        margin-top: 175px;
+        position: initial;
+        .fila1{
+            padding-top: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .div--paginacion{
+            padding-top: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .card{
+            position: initial;
+        }
     }
-}
+    /* femenino */
+    /* y */
+    /* otros */
+    .principal1{
+        margin-top: 175px;
+        position: initial;
+        .fila1{
+            padding-top: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .div--paginacion{
+            padding-top: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .card{
+            position: initial;
+        }
+    }
+        
+    /* politicas de devolucion */
+    .politica{
+        margin-top: 182px;
+        min-height: 800px;
+        .conteiner{
+            position: initial;
+        }
+    }
 }
 /* Portatiles-------------- */
 @media only screen and (min-width:1200px){
     /*pagina principal*/
 /*header*/
 .header1{
-    background-color: #85586F;
     height: 175px;
     position: fixed;
     top: 0px;
@@ -644,17 +534,17 @@ main.otros{
     grid-template-columns: 1;
     grid-template-rows: 100vh 600px 650px;
     .vista{
-        background: rgb(133,88,111);
-    background: radial-gradient(circle, rgba(133,88,111,1) 17%, rgba(172,125,136,1) 60%);
+        background: $color2;
+        background: radial-gradient(circle, rgba(133,88,111,1) 17%, rgba(172,125,136,1) 60%);
         font-size: x-large;
         padding: 40px 150px 80px;
         margin-top: 110px;
-        border: 65px solid #85586f ;
+        border: 65px solid $color1 ;
     }
 }
 /*footer */
 footer{
-    background-color: #85586F;
+    background-color: $color1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 430px;
@@ -685,61 +575,13 @@ footer{
         }
     }
 }
-
-
 /*paginas-------------------*/
 
 /* masculino-----1200px------- */
-.header2.masculino{
-    background-color: #85586F;
-    height: 175px;
-    min-width: 100vw;
-    position: fixed;
-    top: 0px;
-    border: 1px solid black;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    .nombre{
-        margin: 0%;
-        font-size: 400%;
-        padding-left: 15px;
-        grid-column: 1/3;
-    }
-    .nav{
-        align-self: flex-end;
-        padding-top: 20px;
-        grid-column: 1/2;
-        grid-row: 2/3;
-        .nav-link{
-            padding-right: 20px;
-        }
-        ul li{
-            margin: 0%;
-        }
-        a{
-            font-size: xx-large;
-        }
-    }
-    div{
-        justify-self: end;
-        align-self: end;
-        grid-column: 2/3;
-        grid-row: 2/3;
-        margin: 0%;
-        input{
-            font-size: large;
-            margin-bottom: 5px;
-        }
-    }
-    .redes{
-        grid-template-columns: 2/3;
-        grid-row: 1/2;
-    }
-}
+
 /* main--masculino----1200px */
 
-main.masculino{
+.principal{
     margin-top: 175px;
     position: initial;
     .fila1{
@@ -758,116 +600,29 @@ main.masculino{
         position: initial;
     }
 }
-
-
-
-
-
-
-/* femenino-------1200px------ */
-.header2.femenino{
-    background-color: #85586F;
-    height: 175px;
-    min-width: 100vw;
-    position: fixed;
-    top: 0px;
-    border: 1px solid black;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    .nombre{
-        margin: 0%;
-        font-size: 400%;
-        padding-left: 15px;
-        grid-column: 1/3;
+/* main de femenino */
+.principal1{
+    margin-top: 175px;
+    position: initial;
+    .fila1{
+        padding-top: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
-    .nav{
-        align-self: flex-end;
-        padding-top: 20px;
-        grid-column: 1/2;
-        grid-row: 2/3;
-        .nav-link{
-            padding-right: 20px;
-        }
-        ul li{
-            margin: 0%;
-        }
-        a{
-            font-size: xx-large;
-        }
+    .div--paginacion{
+        padding-top: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
-    div{
-        justify-self: end;
-        align-self: end;
-        grid-column: 2/3;
-        grid-row: 2/3;
-        margin: 0%;
-        input{
-            font-size: large;
-            margin-bottom: 5px;
-        }
-    }
-    .redes{
-        grid-template-columns: 2/3;
-        grid-row: 1/2;
-    }
-}
-
-/* otros------1200px--- */
-.header2.otros{
-    background-color: #85586F;
-    height: 175px;
-    min-width: 100vw;
-    position: fixed;
-    top: 0px;
-    border: 1px solid black;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    .nombre{
-        margin: 0%;
-        font-size: 400%;
-        padding-left: 15px;
-        grid-column: 1/3;
-    }
-    .nav{
-        align-self: flex-end;
-        padding-top: 20px;
-        grid-column: 1/2;
-        grid-row: 2/3;
-        .nav-link{
-            padding-right: 20px;
-        }
-        ul li{
-            margin: 0%;
-        }
-        a{
-            font-size: xx-large;
-        }
-    }
-    div{
-        justify-self: end;
-        align-self: end;
-        grid-column: 2/3;
-        grid-row: 2/3;
-        margin: 0%;
-        input{
-            font-size: large;
-            margin-bottom: 5px;
-        }
-    }
-    .redes{
-        grid-template-columns: 2/3;
-        grid-row: 1/2;
+    .card{
+        position: initial;
     }
 }
 /* main de otros----------- */
-main.otros{
-    margin-top: 175px;
-}
-main.otros .card{
-    position: initial;
-}
+
+
 /* politica------1200px----- */
 .politica{
     margin-top: 175px;
