@@ -10,9 +10,10 @@
 
 @media only screen and (min-width: 320px) {
   .header1 {
+    height: 35vh;
     display: grid;
     padding: 0%;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     min-width: 320px;
     background-color: #85586F;
     min-width: 320px;
@@ -69,6 +70,10 @@
   .header1 .nav a:hover {
     color: white;
   }
+  .header1 .nav a:active {
+    animation: fadeOutUp;
+    animation-duration: 1s;
+  }
   .header1 .nav .nav-link {
     padding: 0%;
     padding-right: 10px;
@@ -81,7 +86,7 @@
     background-color: #AC7D88;
     display: grid;
     grid-template-columns: 1;
-    grid-template-rows: 350px 480px 640px;
+    grid-template-rows: 65vh 480px 640px;
     font-family: "Times New Roman", Times, serif;
     font-weight: bolder;
     color: black;
@@ -90,10 +95,14 @@
     text-align: center;
     font-size: medium;
     border: 10px solid #85586F;
+    grid-column: 1/2;
     grid-row: 1/2;
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  .index .vista p {
+    margin: 0%;
   }
   .index .vista h2 {
     padding-bottom: 10px;
@@ -144,6 +153,17 @@
   .index .caja1 h2 {
     padding-bottom: 20px;
   }
+  .index .whatsapp {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    justify-self: end;
+    position: fixed;
+    bottom: 0%;
+  }
+  .index .whatsapp img {
+    height: 50px;
+    width: 50px;
+  }
   /* footer------------- */
   footer {
     font-family: "Times New Roman", Times, serif;
@@ -152,7 +172,7 @@
     background: url("../img/wave-haikei (2).svg");
     background-size: cover;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1;
     grid-template-rows: 450px 140px 80px;
   }
   footer .ubicacion {
@@ -194,6 +214,7 @@
   footer .pagos {
     justify-self: center;
     align-self: center;
+    grid-column: 1/2;
     grid-row: 3/4;
   }
   footer .pagos img {
@@ -205,11 +226,11 @@
     margin: 0px;
     padding-bottom: 5px;
   }
-  /* /* paginas-----------320px----------- */
+  /* paginas-----------320px----------- */
   body {
     font-family: "Times New Roman", Times, serif;
   }
-  /* main----masculino--320------ */
+  /* main----masculino--320px------ */
   .principal {
     background-color: #AC7D88;
     min-height: 800px;
@@ -250,46 +271,14 @@
     border: 1px solid black;
     background-color: #85586F;
   }
-  /* femenino */
-  .principal1 {
-    background-color: #AC7D88;
-    min-height: 800px;
-    padding: 0%;
-    display: flex;
-    flex-direction: column;
+  .principal .whatsapp {
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
   }
-  .principal1 .fila1 {
-    padding-top: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  .principal1 .fila1 .card {
-    margin-bottom: 10px;
-  }
-  .principal1 .fila1 .card .btn-primary {
-    background-color: #AC7D88;
-    border: 0px;
-  }
-  .principal1 .div--paginacion {
-    padding: 0%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    background-color: #AC7D88;
-    border: 2px solid #AC7D88;
-  }
-  .principal1 .div--paginacion ul {
-    padding: 0%;
-    margin: 0px;
-  }
-  .principal1 .div--paginacion .page-link {
-    position: initial;
-    color: black;
-    border: 1px solid black;
-    background-color: #85586F;
+  .principal .whatsapp img {
+    height: 50px;
+    width: 50px;
   }
   /* politica de devolucion----------- */
   .politica {
@@ -302,10 +291,20 @@
     margin: 0px;
     padding-bottom: 15px;
   }
+  .politica .whatsapp {
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+  }
+  .politica .whatsapp img {
+    height: 50px;
+    width: 50px;
+  }
 }
 /* telefono modo horizontal------------- */
 @media only screen and (min-width: 479px) and (max-width: 767px) {
   .header1 {
+    height: 28vh;
     min-width: 479px;
     display: grid;
     grid-template-columns: 80vw 19vw;
@@ -321,13 +320,18 @@
   .header1 .carrito {
     padding-right: 5px;
   }
+  .index {
+    grid-template-rows: 72vh 480px 640px;
+  }
   .index .vista {
     border: 6vw solid #85586F;
+    font-size: 115%;
   }
 }
 /* tablets de 10 pulgadas-----------*/
 @media only screen and (min-width: 768px) {
   .header1 {
+    height: 32vh;
     grid-template-rows: 80px 50px 50px;
     min-width: 768px;
   }
@@ -343,10 +347,11 @@
     min-width: 768px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 340px 460px 650px;
+    grid-template-rows: 68vh 460px 650px;
   }
   .index .vista {
     border: 40px solid #85586F;
+    font-size: 125%;
   }
   .index .guia {
     padding: 10px 300px 5px;
@@ -376,6 +381,7 @@
   .header1 .nav a {
     font-size: 200%;
   }
+  /* main------- */
   .index {
     min-width: 1024px;
     display: grid;
@@ -386,7 +392,7 @@
     margin-top: 140px;
     padding: 50px 160px 60px;
     border: 45x solid #85586F;
-    font-size: x-large;
+    font-size: 129%;
   }
   .index section .tabla {
     font-size: x-large;
@@ -411,9 +417,7 @@
   .principal .card {
     position: initial;
   }
-  /* femenino */
-  /* y */
-  /* otros */
+  /* femenino y otros*/
   .principal1 {
     margin-top: 175px;
     position: initial;
@@ -450,7 +454,6 @@
     height: 175px;
     position: fixed;
     top: 0px;
-    border: 1px solid black;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -539,8 +542,6 @@
     padding: 0%;
   }
   /*paginas-------------------*/
-  /* masculino-----1200px------- */
-  /* main--masculino----1200px */
   .principal {
     margin-top: 175px;
     position: initial;
@@ -560,27 +561,6 @@
   .principal .card {
     position: initial;
   }
-  /* main de femenino */
-  .principal1 {
-    margin-top: 175px;
-    position: initial;
-  }
-  .principal1 .fila1 {
-    padding-top: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  .principal1 .div--paginacion {
-    padding-top: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  .principal1 .card {
-    position: initial;
-  }
-  /* main de otros----------- */
   /* politica------1200px----- */
   .politica {
     margin-top: 175px;

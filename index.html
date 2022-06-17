@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Lenceria Mel Francine</title>
    <meta name="description" content="Lencería femenina de diseño. Nos destacamos por el confort y calidad de nuestros productos y materias primas. Con cada una de nuestras piezas revalorizamos la confección artesanal de calidad ¡Armá tu conjunto combinando nuestros talles, texturas y exclusivos diseños!">
-   <meta name="keywords"  content="HTML, ASP, JS, META, PALABRAS CLAVE, EJEMPLO">
+   <meta name="keywords"  content="comprar, buenos aires, la matanza, gregorio de laferrere, zantino, uomo, sockmark, informacion, lenceria, masculino, femenino, invierno, verano, niños, niñas, adolecentes ">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
@@ -33,6 +33,7 @@
                </li>
             </ul>
       </nav>
+      <!-- Buscador -->
       <div class="buscador">
          <nav class="navbar navbar-expand-sm ">
             <form class="form-inline" action="/action_page.php">
@@ -50,7 +51,11 @@
          <h2>¿Quienes somos?</h2>
          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo dolore ab, veritatis quae soluta iste et totam non ex sequi dolorum numquam odit aliquid? Doloribus ullam officiis maiores dignissimos mollitia Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptatum magnam mollitia, aperiam officiis dolorem libero animi doloremque, fuga aspernatur dolores architecto, consequatur tenetur iusto. Officiis rerum nemo nisi officia.</p>
       </article>
-      <section class="col-12 col-md-12 col-xl-12" id="tabla">
+      <div class="whatsapp">
+         <a href="https://api.whatsapp.com/send?phone=+54 9 1122927687"><img src="img/whatsapp.png" alt=""></a>
+      </div>
+      <!-- Guia de talles -->
+      <section>
          <h2 class="guia">Guia de talles</h2>
          <div class="col-12 col-md-12 tabla tabla1">
             <table border="1" cellspacing="0" cellpadding="4" class="table-striped"> 
@@ -126,18 +131,18 @@
          <!--Formulario-->
       <div class="caja1 col-12 col-md-12 col-xl-12 ">
          <h2>Dejanos tu opinion</h2>
-         <form action="/action_page.php">
+         <form action="" name="miformulario" method="post" netlify>
             <div class="form-group">
                <label for="nombre">Nombre</label>
-               <input type="name" class="form-control" placeholder="Nombre" id="name">
+               <input type="text" class="form-control" placeholder="Nombre" id="name" required>
             </div>
             <div class="form-group">
                <label for="apellido">Apellido:</label>
-               <input type="surname" class="form-control" placeholder="Apellido" id="surname">
+               <input type="text" class="form-control" placeholder="Apellido" id="surname" required>
             </div>
             <div class="form-group">
                <label for="email">Email:</label>
-               <input type="email" class="form-control" placeholder="Email" id="email">
+               <input type="email" class="form-control" placeholder="Email" id="email" required>
             </div>
             <div class="form-group">
                <textarea name="" id="" cols="30" rows="10" placeholder="Dejanos tu comentario" required></textarea>
@@ -147,11 +152,10 @@
             </div>
          </form>
       </div>
-      
    </main>
    <!--Pie de pagina-->
    <footer class="conteiner-fluid no-gutters">
-      <section class="col-12 col-md-12 col-xl-6 ubicacion">
+      <section class="col-12 col-md-12 col-xl-5 ubicacion">
          <div>
             <p>Ubicacion:</p>
             <p>Gregorio de laferrere</p>
@@ -159,6 +163,7 @@
          </div>
          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13112.795050323446!2d-58.59344837148376!3d-34.750585586745046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc5a69e7bb89f%3A0x2047f7a9e096ceb5!2sAv.%20Luro%206199%2C%20B1757ARE%20Gregorio%20de%20Laferrere%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1652475028437!5m2!1ses!2sar" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
       </section>
+      <!-- Contacto -->
       <section class="col-12 col-md-12 col-xl-6 contacto">
          <ul>
             <li><a href="pages/politica de devolucion.html">Politica de devolucion</a></li>
@@ -168,6 +173,7 @@
             <li><i class="fa-brands fa-facebook"></i> <a href="https://www.instagram.com/melfrancine1/"><i class="fa-brands fa-instagram"></i></a></li>
          </ul>
       </section>
+      <!-- Medios de pago -->
       <section class="pagos">
          <div>
             <img src="targetas/master card.jpg" alt="">
@@ -175,12 +181,12 @@
             <img src="targetas/mercado pago.jpg" alt="">
             <img src="targetas/TransferenciaBancariacolor.png" alt="">
          </div>
-      </section>
-   </footer>   
+      </section> 
+   </footer>  
 
    <script src="js/wow.min.js"></script>
    <script>
-   new WOW().init();
+      new WOW().init();
    </script>
    
    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
