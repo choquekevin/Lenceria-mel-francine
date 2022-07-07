@@ -133,7 +133,8 @@
     position: initial;
   }
   .index .caja1 {
-    border: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     grid-row: 3/4;
     position: initial;
     display: flex;
@@ -173,7 +174,7 @@
     background-size: cover;
     display: grid;
     grid-template-columns: 1;
-    grid-template-rows: 450px 140px 80px;
+    grid-template-rows: 400px 120px 80px;
   }
   footer .ubicacion {
     padding-top: 20px;
@@ -212,6 +213,7 @@
     position: initial;
   }
   footer .pagos {
+    padding-top: 20px;
     justify-self: center;
     align-self: center;
     grid-column: 1/2;
@@ -334,6 +336,9 @@
     height: 32vh;
     grid-template-rows: 80px 50px 50px;
     min-width: 768px;
+  }
+  .header1 .nav .nav-link {
+    padding-right: 15px;
   }
   .header1 .nav a {
     font-size: 200%;
@@ -527,9 +532,6 @@
     font-size: large;
     justify-self: end;
     align-self: end;
-    margin: 10px;
-    margin-right: 10px;
-    grid-column: 21/2;
     grid-row: 1/2;
   }
   footer .pagos {

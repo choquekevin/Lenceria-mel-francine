@@ -149,7 +149,8 @@ $xxlarge: 220%;
             position: initial;
         }
         .caja1{
-            border: 1px solid black;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
             grid-row: 3/4;
             position: initial;
             display: flex;
@@ -191,7 +192,7 @@ $xxlarge: 220%;
         background-size: cover;
         display: grid;
         grid-template-columns: 1;
-        grid-template-rows: 450px 140px 80px;
+        grid-template-rows: 400px 120px 80px;
         .ubicacion{
             padding-top: 20px;
             text-align: center;
@@ -229,6 +230,7 @@ $xxlarge: 220%;
             position: initial;
         }
         .pagos{
+            padding-top: 20px;
             justify-self: center;
             align-self: center;
             grid-column: 1/2;
@@ -319,6 +321,7 @@ $xxlarge: 220%;
             }
         }
     }
+
 }
 /* telefono modo horizontal------------- */
 @media only screen and (min-width:479px) and (max-width:767px){
@@ -354,6 +357,9 @@ $xxlarge: 220%;
         grid-template-rows: 80px 50px 50px;
         min-width: 768px;
         .nav{
+            .nav-link{
+                padding-right: 15px;
+            }
             a{
                 font-size: $xlarge;
             }
@@ -552,9 +558,7 @@ footer{
         font-size: large;
         justify-self: end;
         align-self: end;
-        margin: 10px;
-        margin-right: 10px;
-        grid-column: 21/2;
+        
         grid-row: 1/2;
     }
     .pagos{
